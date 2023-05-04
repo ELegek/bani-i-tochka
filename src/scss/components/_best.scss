@@ -1,0 +1,39 @@
+.best {
+  &__container {
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__img {
+    flex: 0 0 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+  }
+  &__title {
+  }
+  &__list {
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    line-height: 24px;
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 40, 20);
+    }
+    span {
+      color: $accentColor;
+      font-weight: 700;
+    }
+  }
+}

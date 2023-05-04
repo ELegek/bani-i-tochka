@@ -1,0 +1,35 @@
+.stock {
+  &__container {
+  }
+  &__body {
+    background: #627242;
+    box-shadow: 0px 8px 10px #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue('gap', 30, 20);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    flex: 1 1 50%;
+    @media (max-width: $tablet) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    @include adaptiveValue('font-size', 32, 20);
+    line-height: 130%;
+    color: #ffffff;
+    @include adaptiveValue('margin-bottom', 40, 20);
+  }
+}

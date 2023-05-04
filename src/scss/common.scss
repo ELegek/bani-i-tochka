@@ -1,1 +1,70 @@
 // Заголовки, общие БЕМ блоки и прочее...
+.section {
+  &-best,
+  &-consists,
+  &-advantages,
+  &-stock,
+  &-works,
+  &-gallery,
+  &-questions,
+  &-project,
+  &-feedback,
+  &-contacts {
+    @include adaptiveValue('margin-top', 40, 30);
+  }
+}
+
+.btn {
+  &__green {
+    background: linear-gradient(90.91deg, #2e4303 2.98%, #507503 105.07%);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 27px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  &__white {
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #282727;
+    padding: 12px 46px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid #282727;
+      }
+    }
+  }
+}
+
+.title {
+  font-weight: 500;
+  @include adaptiveValue('font-size', 42, 32);
+  line-height: 130%;
+  color: $mainColor;
+  position: relative;
+  @include adaptiveValue('margin-bottom', 50, 40);
+  &::before {
+    content: '';
+    width: 100%;
+    max-width: 670px;
+    height: 1px;
+    background-color: #828282;
+    position: absolute;
+    bottom: -10px;
+  }
+}

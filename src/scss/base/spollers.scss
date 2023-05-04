@@ -8,42 +8,47 @@
 }
 // Спойлер
 .spollers__item {
-  font-size: rem(20);
+  position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    max-width: 570px;
+    height: 1px;
+    background-color: #bdbdbd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 // Заголовок спойлера
 .spollers__title {
   width: 100%;
   cursor: default;
   text-align: left;
-  border: 1px solid #eee;
-  padding: rem(10) rem(15);
-  border-radius: rem(5);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: $accentColor;
+  padding: rem(10) rem(0);
   position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(0px, -50%);
+    transition: all 0.3s ease 0s;
+    @media (max-width: $mobile) {
+      left: 95%;
+    }
+  }
   ._spoller-init & {
     cursor: pointer;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      background-color: #000;
-      height: 2px;
-      width: 15px;
-      transition: transform 0.5s ease 0s;
-    }
-    &::before {
-      transform: translate(-75%, -50%) rotate(40deg);
-    }
-    &::after {
-      transform: translate(0, -50%) rotate(-40deg);
-    }
+
     &._spoller-active {
       &::before {
-        transform: translateX(-75%) rotate(-40deg);
-      }
-      &::after {
-        transform: rotate(40deg);
+        transform: rotate(90deg);
       }
     }
     /*
@@ -83,7 +88,4 @@
 }
 // Контент спойлера
 .spollers__body {
-  padding: rem(20);
-  border-radius: rem(5);
-  border: 1px solid #eee;
 }

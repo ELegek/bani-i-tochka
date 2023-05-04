@@ -1,0 +1,35 @@
+.contacts {
+  &__container {
+  }
+  &__title {
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  &__map {
+    flex: 0 0 50%;
+  }
+  &__content {
+    flex: 0 0 50%;
+  }
+  &__list {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 0 50%;
+  }
+  &__name {
+  }
+  &__text {
+  }
+  &__link {
+  }
+  &__icon {
+  }
+}

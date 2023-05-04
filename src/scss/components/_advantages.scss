@@ -1,0 +1,31 @@
+.advantages {
+  &__container {
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    @include adaptiveValue('gap', 55, 10);
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+  &__item {
+    background: #edebea;
+    border-radius: 5px;
+    padding: 12px 8px 27px;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 130%;
+    color: $accentColor;
+  }
+}

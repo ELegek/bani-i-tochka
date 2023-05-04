@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Бани и точка | Главная"
 })
 
 <body>
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
-      hello
+      @@include('html/components/_hero.htm',{})
+      @@include('html/components/_best.htm',{})
+      @@include('html/components/_consists.htm',{})
+      @@include('html/components/_advantages.htm',{})
+      @@include('html/components/_stock.htm',{})
+      @@include('html/components/_works.htm',{})
+      @@include('html/components/_gallery.htm',{})
+      @@include('html/components/_questions.htm',{})
+      @@include('html/components/_project.htm',{})
+      @@include('html/components/_feedback.htm',{})
+      @@include('html/components/_contacts.htm',{})
     </main>
     @@include('html/_footer.htm',{})
   </div>

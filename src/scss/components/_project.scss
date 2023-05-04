@@ -1,0 +1,16 @@
+.project {
+  &__container {
+  }
+  &__title {
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 30px;
+  }
+  &__item {
+    img {
+      width: 100%;
+    }
+  }
+}
